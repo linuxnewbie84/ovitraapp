@@ -1,0 +1,15 @@
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/huevos
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/icudtl.dat
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/lib/libflutter_linux_gtk.so
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/lib/libfile_selector_linux_plugin.so
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/shaders/ink_sparkle.frag
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.json
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/AssetManifest.bin
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/FontManifest.json
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/kernel_blob.bin
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/assets/images/logo.png
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/NOTICES.Z
+/home/linuxnewbie/Documentos/investigaciondengue/backend/huevos/build/linux/x64/debug/bundle/data/flutter_assets/version.json
