@@ -4,6 +4,8 @@ import 'package:dio/dio.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:huevos/acciones/camara.dart';
 import 'package:huevos/acciones/selec.dart';
+import 'package:http_parser/http_parser.dart';
+import 'package:image_picker/image_picker.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
@@ -17,19 +19,24 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   File? sele_img;
   Dio dio = Dio();
-  Future<void> subir() async {
+  Future<void> subir(sele_img) async {
     try {
-      FormData formData = FormData.fromMap(
-          {'file': await MultipartFile.fromFile(sele_img!.path)});
-      await dio
-          .post('https://aedes-69n6.onrender.com/subir', data: formData)
-          .then((value) {
-        if (value.toString() == '1') {
-          print("Se subió con éxito");
-        } else {
-          print("Hubo un error");
-        }
+      String filename = sele_img!.path.split('/').last;
+
+      FormData formData = FormData.fromMap({
+        'file': await MultipartFile.fromFile(sele_img!.path,
+            filename: filename, contentType: MediaType('image', 'jpeg'))
       });
+      await dio
+          .post('https://aedes-69n6.onrender.com/subir',
+              data: formData,
+              options: Options(headers: {
+                "accept": '*/*',
+                'ContentType': "multipart/form-data"
+              }))
+          .then((response) => print(response))
+          .catchError((error) => print(error));
+      print("Se subió sin problemas");
     } catch (e) {
       print(e.toString());
     }
@@ -38,6 +45,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         centerTitle: true,
         title: Row(
@@ -59,7 +67,7 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.deepOrangeAccent,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.center,
         children: [
           sele_img != null
               ? Image.file(sele_img!)
@@ -101,6 +109,7 @@ class _HomePageState extends State<HomePage> {
                       sele_img = File(croppedFile.path);
                     });
                   }
+                  subir(sele_img);
                 }
               },
               child: const Text(
@@ -141,20 +150,20 @@ class _HomePageState extends State<HomePage> {
                 }
               },
               child: const Text("Seleccionar Imagen")),
-          ElevatedButton(
-            style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.red, foregroundColor: Colors.yellow),
-            onPressed: () {
-              subir();
-            },
-            child: const Text("Subir Imagen para su Análisis"),
-          ),
+          //ElevatedButton(
+            //style: ElevatedButton.styleFrom(
+              //  backgroundColor: Colors.red, foregroundColor: Colors.yellow),
+            //onPressed: () async {
+              //subir();
+            //},
+            //child: const Text("Subir Imagen para su Análisis"),
+          //),
           Container(
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(4),
                 border: Border.all(color: Colors.grey)),
             padding: const EdgeInsets.symmetric(horizontal: 15),
-            margin: const EdgeInsets.symmetric(horizontal: 15),
+            margin: const EdgeInsets.symmetric(horizontal:15),
             child: TextFormField(
                 decoration: InputDecoration(
                     labelText: 'Ingresa el nombre de la imagen resultante',

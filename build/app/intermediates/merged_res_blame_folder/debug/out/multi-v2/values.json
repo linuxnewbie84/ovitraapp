@@ -93,6 +93,25 @@
                     }
                 },
                 {
+                    "source": "/home/linuxnewbie/Documentos/ovitraapp/android/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3,14",
+                        "startColumns": "4,4",
+                        "startOffsets": "173,818",
+                        "endLines": "7,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "476,982"
+                    },
+                    "to": {
+                        "startLines": "1469,1473",
+                        "startColumns": "4,4",
+                        "startOffsets": "94185,94366",
+                        "endLines": "1472,1475",
+                        "endColumns": "12,12",
+                        "endOffsets": "94361,94530"
+                    }
+                },
+                {
                     "source": "/home/linuxnewbie/.gradle/caches/transforms-3/d2a7f03e118140f639e8945afb58cddb/transformed/jetified-startup-runtime-1.1.1/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -124,25 +143,6 @@
                         "startOffsets": "20974",
                         "endColumns": "42",
                         "endOffsets": "21012"
-                    }
-                },
-                {
-                    "source": "/home/linuxnewbie/Documentos/ovitraap/android/app/src/main/res/values/styles.xml",
-                    "from": {
-                        "startLines": "3,14",
-                        "startColumns": "4,4",
-                        "startOffsets": "173,818",
-                        "endLines": "7,16",
-                        "endColumns": "12,12",
-                        "endOffsets": "476,982"
-                    },
-                    "to": {
-                        "startLines": "1469,1473",
-                        "startColumns": "4,4",
-                        "startOffsets": "94185,94366",
-                        "endLines": "1472,1475",
-                        "endColumns": "12,12",
-                        "endOffsets": "94361,94530"
                     }
                 },
                 {
